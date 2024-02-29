@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Form</title>
+    <style>
+      .password-input {
+        flex: 1;
+        border: none;
+        padding: 8px;
+        outline: none;
+      }
+
+      .icon {
+        margin-right: 10px;
+      }
+
+      .password-button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 50%;
+      }
+      .password-container {
+        display: flex;
+        align-items: center;
+        border: 1px solid #d2d2d2;
+        border-radius: 5px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form
+      id="PasswordForm"
+      action=""
+      class=""
+    >
+      <div class="icon">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.7577 11.8282L18.6066 3.97925L20.0208 5.39346L18.6066 6.80767L21.0815 9.28255L19.6673 10.6968L17.1924 8.22189L15.7782 9.6361L17.8995 11.7575L16.4853 13.1717L14.364 11.0504L12.1719 13.2424C13.4581 15.1838 13.246 17.8252 11.5355 19.5356C9.58291 21.4883 6.41709 21.4883 4.46447 19.5356C2.51184 17.583 2.51184 14.4172 4.46447 12.4646C6.17493 10.7541 8.81633 10.542 10.7577 11.8282ZM10.1213 18.1214C11.2929 16.9498 11.2929 15.0504 10.1213 13.8788C8.94975 12.7072 7.05025 12.7072 5.87868 13.8788C4.70711 15.0504 4.70711 16.9498 5.87868 18.1214C7.05025 19.293 8.94975 19.293 10.1213 18.1214Z"
+            fill="black"
+          />
+        </svg>
+      </div>
+      <input
+        type="password"
+        name="Password"
+        id="passwordInput"
+        class="password-input"
+        placeholder="Password"
+      />
+      <button type="button" onclick="togglePassword()" class="password-button">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12.0003 3C17.3924 3 21.8784 6.87976 22.8189 12C21.8784 17.1202 17.3924 21 12.0003 21C6.60812 21 2.12215 17.1202 1.18164 12C2.12215 6.87976 6.60812 3 12.0003 3ZM12.0003 19C16.2359 19 19.8603 16.052 20.7777 12C19.8603 7.94803 16.2359 5 12.0003 5C7.7646 5 4.14022 7.94803 3.22278 12C4.14022 16.052 7.7646 19 12.0003 19ZM12.0003 16.5C9.51498 16.5 7.50026 14.4853 7.50026 12C7.50026 9.51472 9.51498 7.5 12.0003 7.5C14.4855 7.5 16.5003 9.51472 16.5003 12C16.5003 14.4853 14.4855 16.5 12.0003 16.5ZM12.0003 14.5C13.381 14.5 14.5003 13.3807 14.5003 12C14.5003 10.6193 13.381 9.5 12.0003 9.5C10.6196 9.5 9.50026 10.6193 9.50026 12C9.50026 13.3807 10.6196 14.5 12.0003 14.5Z"
+            fill="black"
+          />
+        </svg>
+      </button>
+    </form>
+
+    <script>
+      function togglePassword() {
+        const passwordInput = document.getElementById("passwordInput");
+        passwordInput.type =
+          passwordInput.type === "password" ? "text" : "password";
+      }
+    </script>
+  </body>
+</html>
